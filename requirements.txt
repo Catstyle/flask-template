@@ -1,0 +1,8 @@
+flask
+flask_login
+flask_mongoengine
+flask_bcrypt
+
+pre-commit
+gevent
+uwsgi

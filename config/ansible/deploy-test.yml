@@ -1,0 +1,17 @@
+---
+- hosts: test_centos
+  remote_user: deploy
+  vars:
+      git_url: git@git.cdecube.com:wolong/--name--.git
+      name: --name--
+      pypi_host: pypi.doubanio.com
+  tasks:
+    - name: update git
+      git: repo={{ git_url }} dest=/var/www/{{ name }} version=develop accept_hostkey=True
+
+    - name: update pip requirements
+      pip: chdir=/var/www/{{ name }} requirements=requirement.txt virtualenv=/var/www/{{ name }}/env
+              extra_args='-i http://{{ pypi_host }}/simple/ --trusted-host {{ pypi_host }}'
+
+    - name: restart uwsgi
+      shell: /var/www/{{ name }}/venv/bin/uwsgi --reload /tmp/{{ name }}.pid
