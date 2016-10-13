@@ -1,3 +1,4 @@
+```bash
 .
 ├── apps  # 各种reusable app，约定：如果是对外服务的app，需要在__init__.py存在bp这个变量
 │   ├── auth  # 用户登录，登出
@@ -43,3 +44,4 @@
 ├── tests  # 单元测试
 │   └── __init__.py
 └── wsgi.py  # 启动脚本
+```
