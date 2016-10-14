@@ -1,4 +1,5 @@
 flask
+flask_restful
 flask_login
 flask_mongoengine
 flask_bcrypt

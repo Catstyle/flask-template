@@ -10,7 +10,7 @@
       git: repo={{ git_url }} dest=/var/www/{{ name }} version=develop accept_hostkey=True
 
     - name: update pip requirements
-      pip: chdir=/var/www/{{ name }} requirements=requirement.txt virtualenv=/var/www/{{ name }}/env
+      pip: chdir=/var/www/{{ name }} requirements=requirements.txt virtualenv=/var/www/{{ name }}/venv
               extra_args='-i http://{{ pypi_host }}/simple/ --trusted-host {{ pypi_host }}'
 
     - name: restart uwsgi
