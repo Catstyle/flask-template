@@ -18,7 +18,7 @@ def parse_args():
     )
 
     args = parser.parse_args()
-    args.template_url = 'git@git.cdecube.com:wolong/flask-restful-template.git'
+    args.template_url = 'https://github.com/catstyle/flask-template.git'
 
     print('args:', args)
     return args
