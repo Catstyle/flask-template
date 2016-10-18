@@ -69,3 +69,5 @@ venv
 
 migrations/
 *.swp
+
+core/conf/local.py

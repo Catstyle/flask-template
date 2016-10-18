@@ -3,6 +3,9 @@ import os
 
 DEBUG = False
 
+DEBUG_HOST = '127.0.0.1'
+DEBUG_PORT = 1234
+
 SSL_DISABLE = False
 CSRF_ENABLED = False
 TEMPLATES_AUTO_RELOAD = True
