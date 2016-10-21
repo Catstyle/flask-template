@@ -5,3 +5,4 @@
     -   id: autopep8-wrapper
     -   id: flake8
     -   id: check-added-large-files
+    -   id: check-ast
