@@ -1,5 +1,6 @@
 # coding=utf-8
 import os
+from datetime import timedelta
 
 DEBUG = False
 
@@ -13,6 +14,10 @@ TEMPLATES_AUTO_RELOAD = True
 MONGODB_DB = None
 MONGODB_HOST = 'localhost'
 MONGODB_PORT = 27017
+
+# flask_login
+SECRET_KEY = '$ecret_k3y_4_--name--_pr0ject'
+REMEMBER_COOKIE_DURATION = timedelta(hours=12)
 
 LOGGING = {
     'version': 1,
