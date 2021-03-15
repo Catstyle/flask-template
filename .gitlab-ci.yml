@@ -6,8 +6,7 @@ test:
   image: python:3.7
   stage: test
   script:
-    - pip install -r requirements.txt -i http://pypi.doubanio.com/simple
-      --trusted-host pypi.doubanio.com
+    - pip install -r requirements.txt -i https://pypi.doubanio.com/simple
     - mkdir logs
     - pytest --cov=.
   except:
