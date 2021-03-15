@@ -1,7 +1,7 @@
 from .const import messages
 
 
-def make_response(data=None, status=10000):
+def make_response(data=None, status=0):
     return {
         "code": status,
         "data": data,
