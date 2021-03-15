@@ -1,5 +1,8 @@
 ```bash
 .
+├── .flake8  # flake8 linter plugin config
+├── .gitlab-ci.yml  # gitlab CI/CD ，可以添加各种自动化规则
+├── .pre-commit-config.yaml  # 在执行git commit命令时，触发执行一系列指定的检查
 ├── apps  # 各种reusable app，约定：如果是对外服务的app，需要在__init__.py存在bp这个变量
 │   ├── auth  # 用户登录，登出
 │   │   ├── __init__.py
@@ -7,10 +10,6 @@
 │   │   ├── parser.py  # input parser
 │   │   ├── restful.py  # restful api
 │   │   └── urls.py
-│   ├── index  # 首页路由
-│   │   ├── __init__.py
-│   │   ├── urls.py
-│   │   └── views.py
 │   └── __init__.py
 ├── config  # 各种配置文件，文件名应该清晰的表明配置文件的作用
 │   ├── ansible
@@ -31,14 +30,11 @@
 │   ├── __init__.py
 │   ├── logger.py  # 日志logger以及装饰器
 │   └── utils.py  # 脚手架
-├── cover.py  # 单元测试覆盖率脚本
-├── .gitignore
-├── .gitlab-ci.yml  # gitlab CI/CD ，可以添加各种自动化规则
 ├── logs
 │   └── app.log
-├── .pre-commit-config.yaml  # 在执行git commit命令时，触发执行一系列指定的检查
 ├── README.md
-├── requirements.txt  # 依赖库版本信息
+├── requirements.txt  # 生产环境依赖库版本信息
+├── requirements-dev.txt  # 开发环境依赖库版本信息
 ├── static  # 前端静态文件
 ├── templates  # 渲染模板
 ├── tests  # 单元测试
