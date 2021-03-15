@@ -43,8 +43,8 @@ def trace_view(level=logging.INFO):
 
 def trace_method(level=logging.INFO):
     def wrapper(func):
-        assert level in logging._levelNames, level
-        co = func.func_code
+        assert level in logging._levelToName, level
+        co = func.__code__
         # name, level, fn, lno, msg, args, exc_info, func
         record = logging.LogRecord(
             '', level, co.co_filename, co.co_firstlineno, '', (), None,

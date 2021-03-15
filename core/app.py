@@ -1,7 +1,7 @@
 import logging.config
 
 from flask import Flask
-from werkzeug import find_modules, import_string
+from werkzeug.utils import find_modules, import_string
 
 from core.conf import settings
 from core.ext import login_manager, db, session_interface
